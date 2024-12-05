@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="56a983b8-b737-4389-a914-ffa0c3807e06">
+	<property name="ireport.zoom" value="1.3310000000000013"/>
+	<property name="ireport.x" value="24"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nis" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="semester" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM nilaiview where nis=$P{nis} and semester=$P{semester} order by kode_mapel]]>
+	</queryString>
+	<field name="nis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="semester" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nilai" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_mapel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mapel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_guru" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pengampu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="102" y="0" width="350" height="86" uuid="23d47290-6fb6-4d75-b219-0101ba88d99b"/>
+				<imageExpression><![CDATA["D:\\img-parallax\\background.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="96" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="-1" width="332" height="59" uuid="66c8cbbd-cf27-4375-8f5c-61bd9160beff"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAPORT AKHIR SEMESTER TAHUN PELAJARAN 2024/2025]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="64" width="30" height="20" uuid="d4cc19c5-58ab-4946-bbd3-bd385dd5efbd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIS: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="64" width="100" height="20" uuid="5f33b07a-4329-47de-8b4b-eb65fb18af43"/>
+				<textFieldExpression><![CDATA[$F{nis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="398" y="64" width="53" height="20" uuid="b185f18e-0f6b-4458-be21-91489a0dbe8e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Semester :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="451" y="64" width="100" height="20" uuid="15805edf-2a69-42ef-a401-9dde893a5798"/>
+				<textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="64" width="100" height="20" uuid="e8fefa2f-5690-4b6e-9182-c0bce68acdff"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="166" y="64" width="43" height="20" uuid="8d7dbf07-5c8c-4bec-8798-5822627ed5ee"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="30" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="b7179df6-f643-4e8c-ae01-2e415d58fd3a"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="5" width="68" height="20" uuid="6bdfa174-5034-4f4c-9885-69404a955822"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="5" width="98" height="20" uuid="50c59a2b-5bce-4f05-8fd7-c3e44b14c1fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATAPELAJARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="5" width="61" height="20" uuid="b598a909-b376-41d6-afd5-f4ea7719036a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NILAI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="5" width="103" height="20" uuid="36d04a15-f362-4ecb-aaf6-76212f8c4496"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GURU PENGAMPU]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="76" height="20" uuid="bc39e7e2-fd78-4a30-97a4-eb67bbd95e71"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{kode_mapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="10" width="76" height="20" uuid="793214f4-6a58-4ced-aba3-0a8e6155c17b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{mapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="10" width="76" height="20" uuid="c15978c7-f326-45c1-9800-1364aa74f7a3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nilai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="10" width="76" height="20" uuid="d8b3335b-cf94-4c1f-9f7f-0d34a31789de"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Pengampu}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="35" width="555" height="1" uuid="69f9c52b-be0a-4048-87c9-3dcaf1aa29b3"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
